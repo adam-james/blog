@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :user_owns_post!, except: [:show, :index]
+  before_action :user_owns_post!, except: [:show, :index, :new, :create]
 
   # GET /posts
   # GET /posts.json
