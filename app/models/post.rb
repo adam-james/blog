@@ -6,4 +6,6 @@ class Post
 
   validates :title, presence: true, uniqueness: true
   validates :body, presence: true
+
+  paginates_per 10
 end

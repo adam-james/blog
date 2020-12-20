@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.where(author: current_user)
+    @posts = Post.where(author: current_user).page(params[:page])
   end
 
   # GET /posts/1
@@ -80,8 +80,7 @@ class PostsController < ApplicationController
 
     def user_owns_post!
       unless @post.author == current_user
-        # TODO does this raise 404?
-        raise ActionController::RoutingError.new('not found') 
+        raise Mongoid::Errors::DocumentNotFound
       end
     end
 end
