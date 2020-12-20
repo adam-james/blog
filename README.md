@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Dependencies
 
-Things you may want to cover:
+To run, ensure you meet the following dependencies.
 
-* Ruby version
+Rails >= 6.0.2.2, < 6.1
+Ruby 2.7.1
+Node 12.16.1
+MongoDB
 
-* System dependencies
+This does not work with Rails 6.1 as mongoid does not support that.
 
-* Configuration
+## Devlopment
 
-* Database creation
+Seed database.
 
-* Database initialization
+`rails db:seed`
 
-* How to run the test suite
+Run server.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`rails s`
