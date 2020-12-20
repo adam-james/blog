@@ -11,3 +11,14 @@
 <% if current_user&.is_author?(@post) %>
   <%= link_to 'Edit', edit_post_path(@post) %>
 <% end %>
+
+<h2>History</h2>
+<ul>
+  <% @post.history_tracks.each do |track| %>
+    <li>
+      <p>version: <%= track.version %></p>
+      <p>created at: <%= track.created_at %></p>
+      <p>modified: <%= track.modified %></p>
+    </li>
+  <% end %>
+</ul>

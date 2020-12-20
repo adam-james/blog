@@ -7,6 +7,7 @@ gem 'devise', '~> 4.7'
 gem 'kaminari'
 gem 'kaminari-mongoid'
 gem 'mongoid', '~> 7.0.6'
+gem 'mongoid-history'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
