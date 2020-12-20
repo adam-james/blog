@@ -35,4 +35,8 @@ class User
   # field :locked_at,       type: Time
 
   has_many :posts
+
+  def is_author?(post)
+    post.author == self
+  end
 end
